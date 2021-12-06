@@ -1,0 +1,17 @@
+<!DOCTYPE struts PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+ "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="ddefault" extends="struts-default">
+		<action name="listeContact" class="actions.ContactAction" method="liste">
+			<result name="success">/listerContact.jsp</result>
+		</action>
+		<action name="saisirContact" class="actions.ContactAction" method="saisir">
+			<result>/siasirConatact.jsp</result>
+		</action>
+		<action name="enregistrerContact" class="actions.ConatactAction" method="enregistrer">
+			<result name="success">/enregistrerContact.jsp</result>
+			<result name="input">/saisirContact.jsp</result>
+		</action>
+	</package>
+</struts>

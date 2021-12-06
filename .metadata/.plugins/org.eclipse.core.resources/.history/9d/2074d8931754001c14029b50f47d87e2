@@ -1,0 +1,99 @@
+package com.action;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+import com.dao.IDao;
+import com.models.Contact;
+import com.opensymphony.xwork2.ActionSupport;
+import com.service.ContactImpIDao;
+
+public class ContactAction extends ActionSupport{
+	private static final long serialVersionUID = 1L;
+	
+	private ArrayList<Contact> listContact = new ArrayList<>(); 
+	private int id;
+	private String nom;
+	private String mail;
+	private String codePostal;
+	private Date dateInscription;
+	private String photo;
+	private Contact contact;
+	
+	
+	public ArrayList<Contact> getListContact() {
+		return listContact;
+	}
+	public void setListContact(ArrayList<Contact> listContact) {
+		this.listContact = listContact;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getMail() {
+		return mail;
+	}
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+	public String getCodePostal() {
+		return codePostal;
+	}
+	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
+	}
+	public Date getDateInscription() {
+		return dateInscription;
+	}
+	public void setDateInscription(Date dateInscription) {
+		this.dateInscription = dateInscription;
+	}
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+	
+	public Contact getContact() {
+		return contact;
+	}
+	public void setContact(Contact contact) {
+		this.contact = contact;
+	}
+	
+	public String lister() {
+		ContactImpIDao cs = new ContactImpIDao();
+		listContact = (ArrayList<Contact>) cs.listContact();
+		return "success";
+	}
+	
+	public String saisir() {
+		return "success";
+	}
+	
+	public String enregistrer() {
+		try {
+			IDao ct = new ContactImpIDao();
+			ct.addContact(contact);
+			/*Contact c = new Contact();
+			c.setNom(nom);
+			c.setMail(mail);
+			c.setCodePostal(codePostal);
+			c.setDateInscription(dateInscription);
+			c.setPhoto(photo);*/
+			return "success";
+		}catch(Exception ex) {
+			return "input";
+		}
+	}
+}

@@ -1,0 +1,6 @@
+com\action\ContactAction.class
+com\hibernate\HibernateUtil.class
+main.class
+com\service\ContactImpIDao.class
+com\dao\IDao.class
+com\models\Contact.class

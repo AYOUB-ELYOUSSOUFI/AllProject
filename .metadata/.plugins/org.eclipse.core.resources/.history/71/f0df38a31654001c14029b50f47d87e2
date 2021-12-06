@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@taglib uri="/struts-tags" prefix="s"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>L'ajout d'un Contact</h2>
+	<s:form action="enregistrerContact">
+	
+		<s:textfield key="client.nom" />
+		<s:textfield key="client.prenom" />
+		<s:textfield key="client.email" />
+		<s:textfield key="client.adresse" />
+		<s:textfield key="client.ville" />
+		<s:textfield key="client.cp" />
+
+		<s:submit />
+	</s:form>
+</body>
+</html>

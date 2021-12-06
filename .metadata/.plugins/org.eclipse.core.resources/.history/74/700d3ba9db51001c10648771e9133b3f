@@ -1,0 +1,66 @@
+package com.service;
+
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.hibernate.SessionFactory;
+
+import com.dao.CategorieDao;
+import com.hibernate.HibernateUtil;
+import com.models.Categorie;
+
+public class CategorieDaoImp implements CategorieDao{
+	private static final Logger logger = Logger.getLogger(CategorieDaoImp.class.getName());
+	private final SessionFactory sessionFactory = getSessionFactory();
+	
+	protected SessionFactory getSessionFactory() {
+		try {
+			return HibernateUtil.getSessionfactory();
+		}catch(Exception e) {
+			logger.log(Level.SEVERE,"Could not create SessionFactory", e);
+			throw new IllegalStateException("Could not create SessionFactory");
+		}
+	}
+	
+	
+	
+	
+	
+	@Override
+	public void addCategorie(Categorie categorie) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateCategorie(Categorie categorie) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Categorie> listCategories() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Categorie> selectCatByKeyword(String keyWord) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Categorie getCategorieById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void removeCategorie(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

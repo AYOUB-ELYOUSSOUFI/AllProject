@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>L'ajout d'un Contact</h2>
+	<from action="" method="" bgcolor="blue">
+	<p>
+		Le nom : <input type="text" name="txtNom" />
+	</p>
+	<p>
+		L'email : <input type="text" name="txtMail" />
+	</p>
+	<p>
+		Le CodePostal : <input type="text" name="txtCodeP" />
+	</p>
+	<p>
+		La date d'inscription : <input type="date" name="dateInscri" />
+	</p>
+	<p>
+		La photo : <input type="file" name="photo" />
+	</p>
+	</from>
+</body>
+</html>

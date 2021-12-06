@@ -1,0 +1,93 @@
+package projectJframe;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Catalogue extends JFrame{
+	
+	private JPanel panelAction, panelLabel, panelNavigation,panelText;
+	private JButton btnAjouter, btnModifier,btnSupprimer,btnValider,btnFirst,btnNext,btnPrevious,btnLast;
+	private JLabel lblCode,lblDesignation,lblPrix,lblQuantite;
+	private JTextField txtCode,txtDesignation,txtPrix,txtQuantite;
+	
+	public Catalogue() {
+		super("Catalogue");
+		
+		//Labels
+		lblCode = new JLabel("Code : ");
+		lblDesignation = new JLabel("Designation : ");
+		lblPrix = new JLabel("Prix : ");
+		lblQuantite = new JLabel("Quantite : ");
+		
+		//TextFields
+		txtCode = new JTextField("",10);
+		txtDesignation = new JTextField("",10);
+		txtPrix = new JTextField("",10);
+		txtQuantite = new JTextField("",10);
+		
+		//Buttons
+		btnAjouter = new JButton("Ajouter");
+		btnModifier = new JButton("Modifier");
+		btnSupprimer = new JButton("Supprimer");
+		btnValider = new JButton("Valider");
+		btnFirst = new JButton("<");
+		btnNext = new JButton(">>");
+		btnPrevious = new JButton("<<");
+		btnLast = new JButton(">");
+		
+		panelAction = new JPanel(new GridLayout(1,4));
+		
+		panelAction.add(btnAjouter);
+		panelAction.add(btnModifier);
+		panelAction.add(btnSupprimer);
+		panelAction.add(btnValider);
+		this.add(panelAction, BorderLayout.NORTH);
+		
+		panelNavigation = new JPanel(new GridLayout(1,4));
+		
+		panelNavigation.add(btnFirst);
+		panelNavigation.add(btnPrevious);
+		panelNavigation.add(btnNext);
+		panelNavigation.add(btnLast);
+		this.add(panelNavigation, BorderLayout.SOUTH);
+		
+		panelLabel = new JPanel(new GridLayout(4,1));
+		
+		panelLabel.add(lblCode);
+		panelLabel.add(lblDesignation);
+		panelLabel.add(lblPrix);
+		panelLabel.add(lblQuantite);
+		this.add(panelLabel, BorderLayout.WEST);
+		
+		panelText = new JPanel(new GridLayout(4,1));
+		
+		panelText.add(txtCode);
+		panelText.add(txtDesignation);
+		panelText.add(txtPrix);
+		panelText.add(txtQuantite);
+		
+		this.add(panelText, BorderLayout.CENTER);
+		this.setSize(600, 200);
+		this.setVisible(true);
+		
+	}
+	
+	private void activated(boolean v) {
+		btnAjouter.setEnabled(v);
+		btnModifier.setEnabled(v);
+		btnSupprimer.setEnabled(v);
+		btnValider.setEnabled(!v);
+		
+		txtCode.setEditable(!v);
+		txtDesignation.setEditable(!v);
+		txtPrix.setEditable(!v);
+		txtQuantite.setEditable(!v);
+	}
+}

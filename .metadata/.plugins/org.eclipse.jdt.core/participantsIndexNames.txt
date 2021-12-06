@@ -1,0 +1,23 @@
+INDEX VERSION 1.131
+C:\Users\aelyouss\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2737092526.index
+\projectweb3\src\main\java
+C:\Users\aelyouss\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\811088831.index
+\projectweb3\src\main\java
+C:\Users\aelyouss\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3888084861.index
+\projectWebJSP\src\main\java
+C:\Users\aelyouss\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2753642479.index
+\firstProjectweb\src\main\java
+C:\Users\aelyouss\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3295100434.index
+\projectweb3\src\main\java
+C:\Users\aelyouss\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\564995714.index
+\projectWebJSTL\src\main\java
+C:\Users\aelyouss\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3521102783.index
+\projectWebJSTL\src\main\java
+C:\Users\aelyouss\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2783211277.index
+\projectMVC\src\main\java
+C:\Users\aelyouss\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\258036514.index
+\projectAnnuaire\src\main\java
+C:\Users\aelyouss\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3855350538.index
+\projectAnnuaire\src\main\java
+C:\Users\aelyouss\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1991578163.index
+\projectWebJSP\src\main\java

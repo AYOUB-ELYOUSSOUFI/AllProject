@@ -1,0 +1,10 @@
+package com.models;
+
+import java.sql.Connection;
+
+public class Utilitaire {
+	private Connection connection;
+	
+	
+	private Utilitaire() {}
+}

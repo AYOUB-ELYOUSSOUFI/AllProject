@@ -1,0 +1,24 @@
+import java.util.Date;
+
+import com.dao.IDao;
+import com.models.Contact;
+import com.service.ContactImpIDao;
+
+public class Main {
+
+	public static void main(String[] args) {
+		IDao contact = new ContactImpIDao();
+		
+		//contact.addContact(new Contact("zayd","zayd@gmail.com","93000",new Date(2021,10,12),""));
+		
+		//contact.removeContact(8);
+		
+		for(Contact c : contact.listContact()) {
+			System.out.println(c);
+		}
+		
+		//System.out.println(contact);
+
+	}
+
+}

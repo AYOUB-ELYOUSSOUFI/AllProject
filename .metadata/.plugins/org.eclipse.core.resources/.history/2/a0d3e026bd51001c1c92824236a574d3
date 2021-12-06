@@ -1,0 +1,23 @@
+<%@page import="com.view.CategorieForm"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="com.models.*"  %>    
+<%@ page import="com.view.CategorieForm"  %>
+<%@ page contenttype="text/html" pageEncoding="UTF-8"  %>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gestion des categories</title>
+</head>
+<body>
+	<% CategorieForm cf = (CategorieForm)session.setAttribute("catForm"); %>
+	<form action="catalogue" method="post">
+	
+		
+	</form>
+	<form action="catalogue" method="">
+	</form>
+</body>
+</html>

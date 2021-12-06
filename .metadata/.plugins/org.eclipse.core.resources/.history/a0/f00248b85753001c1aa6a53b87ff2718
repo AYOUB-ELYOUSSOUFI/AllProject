@@ -1,0 +1,11 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+	IDao contact = new ContactImpIDao();
+		
+		contact.addContact(new Contact(null,'ayoub','ayoub@gmail.com','93000','12/2/2021',''));
+
+	}
+
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE validators PUBLIC
+	"-//Apache Struts//XWork Validator 1.0.3//EN"
+   "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="nom">
+		<field-validator type="required">
+			<message>
+				The name is required.
+			</message>
+		</field-validator>
+	</field>
+	<field name="mail">
+		<field-validator type="email">
+			<message>
+				Please enter a valid email address.
+			</message>
+		</field-validator>
+	</field>
+	<field name="codePostal">
+		<field-validator type="stringlength">
+			<param name="minLength">5</param>
+			<param name="maxLength">5</param>
+			<param name="trim">true</param>
+			<message>
+				Zip must be 5 characters Long
+			</message>
+		</field-validator>
+	</field>
+</validators>

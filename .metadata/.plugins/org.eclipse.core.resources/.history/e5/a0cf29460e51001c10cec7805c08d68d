@@ -1,0 +1,13 @@
+package com.view;
+
+import java.util.Vector;
+
+import com.models.Categorie;
+
+public class CategorieForm {
+	private Long idCategorie;
+	private String motCle;
+	private String nomCategorie;
+	private String description;
+	private Vector<Categorie> lesCategories;
+}

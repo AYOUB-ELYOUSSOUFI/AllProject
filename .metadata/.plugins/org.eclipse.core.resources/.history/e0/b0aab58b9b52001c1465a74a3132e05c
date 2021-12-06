@@ -1,0 +1,63 @@
+package com.controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.dao.CategorieDao;
+import com.dao.ProduitDao;
+import com.models.Categorie;
+import com.service.CategorieDaoImp;
+import com.service.ProduitDaoImp;
+import com.view.CategorieForm;
+import com.view.ProduitForm;
+
+
+@WebServlet("/ProduitServlet")
+public class ProduitServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+  
+    public ProduitServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		/*ProduitForm pf = new ProduitForm();
+		ProduitDao catalogue = new ProduitDaoImp();
+		if(request.getParameter("addCat") != null) {
+			pf.(request.getParameter("nomProd"));
+			cf.setDescription(request.getParameter("description"));
+			Categorie cat = new Categorie();
+			cat.setNom(request.getParameter("nomCat"));
+			cat.setDescription(request.getParameter("description"));
+			catalogue.addCategorie(cat);
+			cf.setLesCategories(catalogue.listCategories());
+		}else if(request.getParameter("idCat") != null){
+			cf.setIdCat(Long.parseLong(request.getParameter("idCat")));
+			catalogue.removeCategorie((int)cf.getIdCat() );
+			cf.setLesCategories(catalogue.listCategories());
+		}else if(request.getParameter("chercheCat") != null) {
+			cf.setMotCle(request.getParameter("motCle"));
+			cf.setLesCategories(catalogue.selectCatByKeyword(cf.getMotCle()));
+		}else {
+			cf.setLesCategories(catalogue.listCategories());
+		}
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("prodForm", cf);
+		response.sendRedirect("Produit.jsp");*/
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

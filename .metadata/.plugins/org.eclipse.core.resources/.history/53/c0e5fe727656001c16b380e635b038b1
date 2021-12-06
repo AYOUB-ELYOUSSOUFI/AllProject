@@ -1,0 +1,21 @@
+<!DOCTYPE struts PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+ "http://struts.apache.org/dtds/struts-2.0.dtd">
+ <struts>
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="" class="com.action.ContactAction" method="lister">
+			<result name="success">/listerContact.jsp</result>
+			<result name="input">/saisirContact.jsp</result>
+		</action>
+		<action name="saisirContact">
+			<result name="success">/saisirContact.jsp</result>
+		</action>
+		<action name="enregistrerContact" class="com.action.ContactAction" method="enregistrer">
+			<result name="success">/listerContact.jsp</result>
+			<result name="input">/saisirContact.jsp</result>
+		</action>
+		<action name="supprimerContact" class="com.action.ContactAction" method="supprimer">
+			<result name="success">/listerContact.jsp</result>
+		</action>
+	</package>
+</struts>

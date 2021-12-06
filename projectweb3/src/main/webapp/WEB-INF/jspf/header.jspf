@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Messages</title>
+</head>
+<body bgcolor="#FFFF66">
+	<font face="Arial">
+		<h2 align="center">Messages</h2>
+		<hr/>
+		<table border="1" cellpadding="3" cellspacing="2" width="90%" align="center">
+			<tr bgcolor="#FF9900">
+			<th align="left"><a href="bienvenue.jsp">Sujets</a></th>
+			<th>
+				<a href="#">Identificateur</a>
+				<a href="nouvelUtilisateur.jsp">Inscription</a>
+			</th>
+			</tr>
+		</table>

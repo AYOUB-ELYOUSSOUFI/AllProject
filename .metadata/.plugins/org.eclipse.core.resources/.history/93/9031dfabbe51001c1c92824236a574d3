@@ -1,0 +1,75 @@
+package com.models;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+@SuppressWarnings("cfg")
+public class Catalogue {
+
+	public Catalogue() {}
+	
+	public void addCategorie(String title,String description) {
+		Connection connection = Singleton.getConnection();
+		String req = "insert into categorie (titre,description) values (?,?)";
+		try {
+			PreparedStatement ps = connection.prepareStatement(req);
+			ps.setString(1, title);
+			ps.setString(1, description);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println("Erreur d'insersion" + e);
+			e.printStackTrace();
+		}
+	}
+	
+	public void deleteCategorie(long idCat) {
+		Connection connection = Singleton.getConnection();
+		String req = "delete from categorie where idCategorie = ?";
+		try {
+			PreparedStatement ps = connection.prepareStatement(req);
+			ps.setLong(1, idCat);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println("Erreur de suppression");
+			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<Categorie> selectAll(){
+		String req = "select * from categorie";
+		return selectCategories(req);
+	} 
+	
+	public ArrayList<Categorie> selectById(String motCle) {
+		String req = "select * from categorie where titre like '%" + motCle + "%'";
+		return selectCategories(req);
+	}
+	
+	
+	public ArrayList<Categorie> selectCategories(String req){
+		Connection connection = Singleton.getConnection();
+		ArrayList<Categorie> categories = new ArrayList<>();
+		Categorie cat = null;
+		try {
+			PreparedStatement ps = connection.prepareStatement(req);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				cat = new Categorie();
+				cat.setIdCat(new Long(rs.getLong("idCategorie")));
+				cat.setTitre(rs.getString("titre"));
+				cat.setDesignation(rs.getString("description"));
+				categories.add(cat);
+			}
+		}catch(SQLException e) {
+			System.out.println("Erreur de selection " + req + "\n" + e);
+			e.printStackTrace();
+		}
+		return categories;
+	}
+	
+	
+}
